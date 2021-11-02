@@ -44,7 +44,6 @@ router.post('/delete/:id', async (req, res) => {
     try {
         await User.destroy({where: {id: req.params.id}})
         res.status(200).json({})
-        // res.redirect('/')
     } catch (e) {
         return res.status(500).json(e)
     }
